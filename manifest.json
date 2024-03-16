@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "POM Shield",
+    "version": "1.0.0",
+    "description": "my extension",
+    "permissions": [
+      "tabs",
+      "storage"
+      ],
+    "icons": { 
+        "16": "POMshieldLogo.png",
+        "32": "POMshieldLogo.png",
+        "48": "POMshieldLogo.png",
+        "128": "POMshieldLogo.png"
+      },
+    "action": { 
+      "default_icon": {              
+      "16": "POMshieldLogo.png",   
+      "24": "POMshieldLogo.png",  
+      "32": "POMshieldLogo.png"   
+        },
+        "default_title": "POM Shield extension",
+        "default_popup": "popup.html"
+      },
+      "content_scripts": [
+        {
+          "matches": ["*://twitter.com/*"],
+          "css": ["contentstyle.css"],
+          "js": ["contentscript.js"]
+        }
+      ]
+ 
+}

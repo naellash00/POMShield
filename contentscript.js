@@ -1,23 +1,18 @@
-
-console.log("contentscript injected or not");
-
-
-document.querySelectorAll('img').forEach(img => {
-    img.classList.add('twitter-img-blur');
-});
-
-document.querySelectorAll('video').forEach(video => {
-    video.classList.add('twitter-video-blur');
-});
-
-/*const elementsToBlur = document.querySelectorAll('img, video');
-elementsToBlur.forEach(element => {
-    element.style.filter = 'blur(20px)';
-}); */
-
-
-//async function fetchPosts(){}
-//function blurOffensivePosts(){}
+//console.log("contentscript injected or not");
 //function POMEngine(post) {} 
+
+function blurPostText() {
+    // Select the post's text element 
+    const tweetTextElement = document.querySelector('[data-testid="tweetText"]');
+    // Check if the element exists
+    if (tweetTextElement) {
+        // Apply the blur
+        tweetTextElement.style.filter = 'blur(10px)';
+    }
+}
+
+// Call the blurPostText function
+blurPostText();
+
 
  

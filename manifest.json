@@ -5,22 +5,20 @@
     "description": "my extension",
     "permissions": [
       "tabs",
-      "storage"
+      "storage",
+      "activeTab",                
+      "webNavigation",           
+      "webRequest"
+      ],
+      "host_permissions": [
+        "http://twitter.com/*",
+        "https://twitter.com/*"
       ],
     "icons": { 
         "16": "POMshieldLogo.png",
         "32": "POMshieldLogo.png",
         "48": "POMshieldLogo.png",
         "128": "POMshieldLogo.png"
-      },
-    "action": { 
-      "default_icon": {              
-      "16": "POMshieldLogo.png",   
-      "24": "POMshieldLogo.png",  
-      "32": "POMshieldLogo.png"   
-        },
-        "default_title": "POM Shield extension",
-        "default_popup": "popup.html"
       },
       "content_scripts": [
         {

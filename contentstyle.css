@@ -1,7 +1,6 @@
-/* img, video {
-    filter: blur(20px);
-} */
 
-.twitter-img-blur, .twitter-video-blur {
-    filter: blur(10px) !important; 
+[data-testid="tweetText"] {
+    filter: blur(5px);
 }
+
+
